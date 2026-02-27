@@ -1,0 +1,24 @@
+{
+  "name": "openclaw-hosted",
+  "version": "1.0.0",
+  "description": "OpenClaw Hosted - Multi-tenant ECS Fargate deployment",
+  "main": "bin/openclaw.js",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "cdk deploy '*' --require-approval never",
+    "destroy": "cdk destroy '*' --force",
+    "synth": "cdk synth",
+    "bootstrap": "cdk bootstrap"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.168.0",
+    "constructs": "^10.4.2",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/source-map-support": "^0.5.10",
+    "aws-cdk": "^2.168.0",
+    "typescript": "^5.7.0"
+  }
+}

@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# CDK output and context (may contain account IDs)
+cdk.out/
+cdk.context.json
+
+# Environment files
+.env
+*.env.local
+
+# Build output
+dist/
+.next/
+
+# Deployment scripts with live API keys / env vars
+scripts/deploy.sh

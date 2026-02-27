@@ -1,0 +1,6 @@
+{
+  "app": "npx ts-node bin/openclaw-new.ts",
+  "context": {
+    "@aws-cdk/core:enableStackNameDriftDetection": true
+  }
+}
