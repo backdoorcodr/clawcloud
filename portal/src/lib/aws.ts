@@ -19,6 +19,11 @@ export interface UserInstance {
   createdAt: number;
   lastUpdated: number;
   accessPointId?: string;
+  // Vertical & billing fields
+  vertical?: string;
+  plan?: string;
+  creditsLimit?: number;
+  creditsUsed?: number;
 }
 export async function saveUserInstance(instance: UserInstance) {
   const tableName = process.env.DYNAMODB_TABLE_NAME!;
@@ -121,6 +126,11 @@ export interface LaunchInstanceParams {
   userId: string;
   secrets: Record<string, string>;
   gatewayToken: string;
+  // Vertical-specific fields (optional for legacy launches)
+  vertical?: string;
+  plan?: string;
+  creditsLimit?: number;
+  systemPrompt?: string;
 }
 export async function launchGatewayTask(params: LaunchInstanceParams): Promise<string> {
   const { userId, secrets, gatewayToken } = params;
